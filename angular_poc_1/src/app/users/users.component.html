@@ -1,0 +1,27 @@
+<section class="userwrap">
+    <h1>Users List</h1>
+    <div class="panel panel-default">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of usersObj">
+                    <td>{{user.name}}</td>
+                    <td>{{user.age}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+    <div>
+        <div *ngIf="flag; else else_block">
+            IF condition is displaying...
+        </div>
+        <ng-template #else_block>ELSE condition displaying</ng-template>
+    </div>
+</section>
